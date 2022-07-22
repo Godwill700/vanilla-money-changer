@@ -1,0 +1,269 @@
+/*=================+
+ |IMPORT COMPONENTS|
+ +=================*/
+// @use "components/mixins";
+// @use "components/animations";
+// @use "components/typography";
+
+/*******************
+  * IMPORT SECTIONS *
+  *******************/
+
+// @use "sections/header";
+// @use "sections/rateCharge";
+// @use "sections/product-price";
+// @use "sections/result";
+// @use "sections/faq";
+
+/*************
+ * VARIABLES *
+ *************/
+
+// $app-bg:;
+$main-bg: #020024;
+$logo-color: #50777c;
+$main-text-color1: #8cc5cd;
+$logo-font: 2.05rem;
+$main-font: 1.2rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  color: $main-text-color1;
+  font-size: $main-font;
+}
+
+/**********
+ * MIXINS *
+ **********/
+@mixin container {
+  width: 90%;
+  margin: 0rem auto;
+  margin-top: 2rem;
+}
+
+@mixin inputBottom {
+  input {
+    width: 70%;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid $main-text-color1;
+    display: block;
+    font-size: 1.2em;
+    padding: 0.5em;
+  }
+}
+@mixin flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+@mixin label1 {
+  label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.app-container {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    216deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 36, 44, 1) 46%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  height: 100vh;
+
+  overflow-y: scroll;
+}
+.main-content {
+  background-color: $main-bg;
+  border-radius: 10px;
+  opacity: 0.8;
+  width: 50%;
+  margin: 0px auto;
+  position: relative;
+  top: 5rem;
+
+  /********** Desktop**********/
+  @media (min-width: 767px) and (max-width: 991px) {
+    width: 80%;
+  }
+
+  /*******Tablet devices********/
+  @media (min-width: 575px) and (max-width: 767px) {
+    width: 90%;
+  }
+  /********** Mobile phones**********/
+  @media (max-width: 575px) {
+    width: 95%;
+    top: 2rem;
+  }
+}
+
+header {
+  @include container();
+
+  h1 {
+    font-size: $logo-font;
+    padding-top: 2rem;
+    font-weight: 700;
+  }
+}
+
+/*=====+
+ |INTRO styles|
+ +=====*/
+
+.intro {
+  font-weight: 300;
+  font-style: italic;
+  @include container();
+}
+
+/*================+
+ |RATE AND CHARGES|
+ +================*/
+
+.rate-charge {
+  @include flex1();
+  @include container();
+  @include inputBottom();
+  @include label1();
+
+  .alert {
+    font-weight: 600;
+    font-style: italic;
+    background-color: $main-text-color1;
+    color: red;
+    width: 60%;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.4rem;
+    opacity: 0.5;
+    display: none;
+  }
+
+  .main-charges {
+    width: 30%;
+  }
+  .charge-percentage {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8cc5cd;
+    color: $main-bg;
+
+    .btn {
+      @include flexCenter();
+      width: 70%;
+      padding: 0.3rem;
+      background-color: #020024;
+      border: 0.02rem solid $main-text-color1;
+    }
+
+    .charge-rate {
+      display: flex;
+      justify-content: center;
+      color: inherit;
+      width: 100%;
+      margin: auto auto;
+      // border-right: 2px solid $main-bg;
+      // border-left: 2px solid $main-bg;
+    }
+  }
+}
+
+/*****************
+ * PRODUCT PRICE *
+ *****************/
+
+.product-price {
+  @include flex1();
+  @include container();
+  @include inputBottom();
+  @include label1();
+
+  .currency {
+    font-size: 0.7rem;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .in-usd {
+    opacity: 0.9;
+    @media (max-width: 575px) {
+      width: 50%;
+    }
+
+    h1 {
+      color: red;
+      font-size: 1.5rem;
+      opacity: 0.6;
+
+      .currency {
+        padding-right: 0.5rem;
+        font-size: 0.6rem;
+        font-style: italic;
+        color: rgb(185, 214, 185);
+      }
+    }
+
+    span {
+      font-size: 1.9rem;
+      color: rgb(185, 214, 185);
+    }
+  }
+}
+
+.est-usd-price {
+  @include container();
+  @include inputBottom();
+  input {
+    width: 50%;
+  }
+}
+
+.result {
+  @include flex1();
+  @include label1();
+  background-color: #8cc5cd;
+  display: block;
+  color: #020024;
+  margin-top: 2rem;
+  overflow: auto;
+  border-radius: 0rem 0rem 1.2rem 1.22rem;
+
+  .total-saving {
+    padding-bottom: 2rem;
+    margin: 2.5rem auto 0rem;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+
+    h1 {
+      color: $main-bg;
+      font-weight: 600;
+      font-style: italic;
+      font-size: 1.1rem;
+      padding-top: 0.5rem;
+      margin-right: 2rem;
+    }
+
+    p {
+      color: $main-bg;
+      font-weight: 700;
+      font-size: 2.5rem;
+      span {
+        color: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+    }
+  }
+}
