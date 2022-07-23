@@ -33,7 +33,6 @@
   width: 50%;
   margin: 0px auto;
   position: relative;
-  top: 0.5rem;
   /********** Desktop**********/
   /*******Tablet devices********/
   /********** Mobile phones**********/
@@ -181,7 +180,7 @@ header h1 {
   font-weight: 500;
 }
 .product-price .in-usd h1 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   opacity: 0.6;
 }
 .product-price .in-usd h1 .currency {
