@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   color: #8cc5cd;
   font-size: 1.2rem;
 }
@@ -63,7 +63,7 @@ header {
 header h1 {
   font-size: 2.05rem;
   padding-top: 2rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /*=====+
@@ -112,7 +112,7 @@ header h1 {
   opacity: 0.5;
   display: none;
 }
-.rate-charge .main-charges {
+.rate-charge .charges {
   width: 30%;
 }
 .rate-charge .charge-percentage {
@@ -167,15 +167,18 @@ header h1 {
   font-weight: 500;
 }
 .product-price .in-usd {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 @media (max-width: 575px) {
   .product-price .in-usd {
-    width: 50%;
+    width: 30%;
   }
 }
+.product-price .in-usd p {
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+}
 .product-price .in-usd h1 {
-  color: red;
   font-size: 1.5rem;
   opacity: 0.6;
 }

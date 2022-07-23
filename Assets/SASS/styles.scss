@@ -30,7 +30,8 @@ $main-font: 1.2rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Work Sans", sans-serif;
+  // font-family: "Crimson Text", serif;
+  font-family: "Noto Sans", sans-serif;
   color: $main-text-color1;
   font-size: $main-font;
 }
@@ -114,7 +115,7 @@ header {
   h1 {
     font-size: $logo-font;
     padding-top: 2rem;
-    font-weight: 700;
+    font-weight: 800;
   }
 }
 
@@ -150,7 +151,7 @@ header {
     display: none;
   }
 
-  .main-charges {
+  .charges {
     width: 30%;
   }
   .charge-percentage {
@@ -173,8 +174,7 @@ header {
       color: inherit;
       width: 100%;
       margin: auto auto;
-      // border-right: 2px solid $main-bg;
-      // border-left: 2px solid $main-bg;
+      // border: 2px solid red;
     }
   }
 }
@@ -196,17 +196,21 @@ header {
   }
 
   .in-usd {
-    opacity: 0.9;
+    opacity: 0.8;
 
     @media (max-width: 575px) {
-      width: 50%;
+      width: 30%;
+    }
+
+    p {
+      margin-bottom: 2.2rem;
+      font-weight: 500;
     }
 
     h1 {
-      color: red;
       font-size: 1.5rem;
       opacity: 0.6;
-
+      // text-align: left;
       .currency {
         padding-right: 0.5rem;
         font-size: 0.6rem;

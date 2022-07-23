@@ -8,7 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./Assets/css/styles.css">
 
@@ -29,13 +32,13 @@
             <section class="rate-charge">
                 <div class="rate"><label for="rate">Black Market Rate</label>
                     <div class="alert">Please Enter Rate</div>
-                    <input type="number">
+                    <input type="number" id="black-market-rate">
                 </div>
                 <div class="charges">
-                    <label for="charges">Charges</label>
+                    <label for="charges">Charges (%)</label>
                     <div class="charge-percentage">
                         <button id="decrease" class="btn">-</button>
-                        <span id="rate" class="charge-rate">6%</span>
+                        <span id="charge-percentage" class="charge-rate">6</span>
                         <button id="increase" class="btn">+</button>
                     </div>
                 </div>
@@ -44,13 +47,13 @@
             <section class="product-price">
                 <div class="in-zw">
                     <label for="zwprice">Product Price <span class="currency">(RTGS)</span></label>
-                    <input type="number" name="zwprice" id="zw-product-price">
+                    <input type="number" name="zwprice" id="zw-price">
                 </div>
                 <div class="in-usd">
-                    <label for="equiv price">Equiv Price</label>
+                    <p>Equiv Price</p>
                     <div>
                         <h1><span class="currency">(USD)</span>
-                            <span class="equiv-price" id="rated-usd-price">20.25</span>
+                            <span class="equiv-price" id="rated-usd-price"></span>
                         </h1>
                     </div>
                 </div>
@@ -71,7 +74,7 @@
 
 
 
-    <script src="./Assets/js/bootstrap.bundle.js"></script>
+    <script src="./Assets/js/main.js"></script>
 </body>
 
 </html>
