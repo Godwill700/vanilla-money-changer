@@ -53,7 +53,7 @@ $main-font: 1.05rem;
     border: none;
     border-bottom: 0.1rem solid $main-text-color1;
     display: block;
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 0.5em;
   }
 }
@@ -138,6 +138,9 @@ header {
   @include container();
   @include inputBottom();
   @include label1();
+  .rate {
+    min-width: 20%;
+  }
 
   .alert {
     font-weight: 600;
@@ -153,7 +156,7 @@ header {
 
   .charges {
     width: 35%;
-    max-width: 30%;
+    max-width: 40%;
   }
   .charge-percentage {
     display: flex;
@@ -205,8 +208,8 @@ header {
     opacity: 0.8;
 
     p {
-      margin-bottom: 2.2rem;
-      font-weight: 300;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
     }
 
     h1 {
@@ -223,7 +226,7 @@ header {
     }
 
     span {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: rgb(185, 214, 185);
     }
   }
@@ -291,6 +294,7 @@ header {
       color: $main-bg;
       font-weight: 900;
       font-size: 1.8rem;
+      margin-right: 1.5rem;
       span {
         color: inherit;
         font-size: inherit;

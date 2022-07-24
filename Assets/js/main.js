@@ -50,6 +50,8 @@ calculateSavingOrLoss = () => {
     totalLoss.style.display = "inline-block";
     totalLoss.style.color = "#F71735";
     totalLoss.style.marginLeft = "2rem";
+    // totalSavingOrLoss.style.color = "red";
+    console.log(totalSavingOrLoss);
   }
 };
 
